@@ -1,0 +1,65 @@
+! General settings
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.cursorBlink: true
+!URxvt.letterSpace: -1
+
+! Fonts
+!URxvt.font: xft:Terminess Nerd Font Mono:style=Regular:size=15
+!URxvt.font: xft:3270 Nerd Font Mono:style=Regular:size=15
+!URxvt.font: xft:ShureTechMono Nerd Font Mono:style=Regular:size=15
+URxvt.font: xft:Hack Nerd Font Mono:style=Regular:size=13
+! Fonts -- Style
+!URxvt.boldFont: xft:Terminess Nerd Font Mono:style=Bold:size=15
+URxvt.boldFont: xft:Hack Nerd Font Mono:style=Bold:size=13
+!URxvt.italicFont: xft:Terminess Nerd Font Mono:style=Italic:size=15
+URxvt.italicFont: xft:Hack Nerd Font Mono:style=Italic:size=13
+!URxvt.boldItalicFont: xft:Terminess Nerd Font Mono:style=Bold Italic:size=15
+URxvt.boldItalicFont: xft:Hack Nerd Font Mono:style=Bold Italic:size=13
+
+! Copy/Paste
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+
+! Arrow Keys
+URxvt.keysym.Control-Left:  \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+
+! Dark mode color scheme
+URxvt.background: #353535
+URxvt.foreground: #f8f8f2
+URxvt.cursorColor: #f8f8f2
+
+! Black
+URxvt.color0: #282a36
+URxvt.color8: #6272a4
+
+! Red
+URxvt.color1: #ff5555
+URxvt.color9: #ff6e67
+
+! Green
+URxvt.color2: #50fa7b
+URxvt.color10: #5af78e
+
+! Yellow
+URxvt.color3: #f1fa8c
+URxvt.color11: #f4f99d
+
+! Blue
+URxvt.color4: #bd93f9
+URxvt.color12: #caa9fa
+
+! Magenta
+URxvt.color5: #ff79c6
+URxvt.color13: #ff92d0
+
+! Cyan
+URxvt.color6: #8be9fd
+URxvt.color14: #9aedfe
+
+! White
+URxvt.color7: #f8f8f2
+URxvt.color15: #ffffff

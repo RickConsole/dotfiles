@@ -1,0 +1,30 @@
+[global]
+    font = Monospace 9
+    frame_width = 2
+    sort = yes
+    indicate_hidden = yes
+    word_wrap = yes
+    ignore_newline = no
+    geometry = "300x5-10+10"
+    shrink = no
+    transparency = 0
+    idle_threshold = 120
+
+[urgency_low]
+    background = "#353535"
+    foreground = "#f8f8f2"
+    timeout = 10
+
+[urgency_normal]
+    background = "#353535"
+    foreground = "#f8f8f2"
+    timeout = 10
+
+[urgency_critical]
+    background = "#353535"
+    foreground = "#f8f8f2"
+    timeout = 0
+
+[frame]
+    width = 2
+    color = "#f8f8f2"

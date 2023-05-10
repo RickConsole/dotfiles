@@ -1,0 +1,49 @@
+#! /bin/sh
+
+intern=eDP-1
+hdmi=HDMI-1
+
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+xinput set-button-map 10 1 1 3
+
+if [[ $(xrandr -q | grep "$hdmi connected") ]];
+then
+   xrandr --output "$intern" --primary --auto --output "$hdmi" --right-of "$intern" --auto
+   bspc monitor "$intern" -d I II III IV V
+   bspc monitor "$hdmi" -d VI VII VIII IX X
+else
+   bspc monitor -d I II III IV V VI VII VIII IX X
+fi
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+# set background
+feh --bg-fill /home/rick/.config/wallpapers/dore2.jpg
+
+# start polybar
+~/.config/polybar/launch.sh
+
+# Toggle Floating
+super + d
+    if [ -z "$(bspc query -N -n focused.floating)" ]; then \
+        bspc node focused -t floating; \
+    else \
+        bspc node focused -t tiled; \
+    fi
+
+# Lockscreen
+alt + shift + x
+    betterlockscreen -l dim
